@@ -17,13 +17,14 @@
         <header>
             <img class="logo" src="./assets/logo.png" alt="Logo-Playstation">
             <nav>
-                <ul>
-                    <li><a class="nav-link">Consoles</a></li>
-                    <li><a class="nav-link">Acessórios</a></li>
-                    <li><a class="nav-link">Controles</a></li>
-                    <li><a class="nav-link">Personalizar</a></li>
+                <ul id="menu-list">
+                    <li class="nav-li"><a class="nav-link">Consoles</a></li>
+                    <li class="nav-li"><a class="nav-link">Acessórios</a></li>
+                    <li class="nav-li"><a class="nav-link">Controles</a></li>
+                    <li class="nav-li"><a class="nav-link">Personalizar</a></li>
                 </ul>
             </nav>
+            <img src="./assets/menu.png" class="menu-icon" alt="botao-menu" onclick = "showMenu()" >
         </header>
 
         <div class="container-2">
@@ -52,4 +53,20 @@
         </div>
     </div>
 </body>
+<script>
+    
+   const menuList = document.getElementById("menu-list")
+   menuList.style.maxHeight = "0px"
+   
+   function showMenu () {
+    if(menuList.style.maxHeight == "0px"){
+        menuList.style.maxHeight = "120px"
+    } else {
+        menuList.style.maxHeight = "0px"
+    }
+   }
+    
+
+</script>
+
 </html>
