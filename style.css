@@ -116,6 +116,25 @@ h5 {
     border-radius: 6px;
     cursor: pointer;
     background: linear-gradient(90deg, rgba(255, 53, 39, 1) 0%, rgba(251, 82, 131, 1) 100%);
+    transition: all 0.6s ease-in-out;
+   
+}
+
+.buy-now img {
+    width: 30px;
+    display: none;
+}
+
+.buy-now:hover img {
+    display: block;
+}
+
+.buy-now:hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
 }
 
 .container-right {
@@ -128,6 +147,7 @@ h5 {
     width: 80%;
     margin-left: 70px;
     z-index: 2;
+    animation: moveControl 2s infinite alternate ease-in-out;
 }
 
 .color-box {
@@ -211,10 +231,13 @@ h5 {
         top: 60px;
         left: 60px;
         overflow: hidden;
+        transition: all 0.7s ease-in-out;
+
     }
 
     .menu-icon {
         display: block;
+        cursor: pointer;
     }
 
     .nav-li {
@@ -222,4 +245,10 @@ h5 {
         margin-top: 5px;
     }
 
+}
+
+@keyframes moveControl {
+    From { 
+        transform: translate(-5%, -5%) rotate(5deg);
+    }
 }
